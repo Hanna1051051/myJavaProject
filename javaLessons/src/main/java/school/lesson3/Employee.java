@@ -10,12 +10,11 @@ public class Employee {
     private int wage;
     private int age;
 
-    //3. Внутри класса «Сотрудник» написать метод, который выводит информацию об
-    //объекте в консоль.
-    public void info() {
-        System.out.println("ФИО: " + name + "; Контактные данные: эл почта" +
-                email + ", телефон " + telephone + "; Должность: " + position + "; Возраст: " + age);
-    }
+
+    //   public void info() {
+    //    System.out.println("ФИО: " + name + "; Контактные данные: эл почта" +
+    //            email + ", телефон " + telephone + "; Должность: " + position + "; Возраст: " + age);
+    //}
 
     //2. Конструктор класса должен заполнять эти поля при создании объекта.
 
@@ -25,7 +24,29 @@ public class Employee {
         this.email = email;
         this.telephone = telephone;
         this.wage = wage;
-        this.age = age;
+        if (age >= 0) {
+            this.age = age;
+        } else {
+            System.out.println("Введен некорректный возраст");
+        }
+    }
+
+
+    //3. Вариант 2 с get  set - Внутри класса «Сотрудник» написать метод, который выводит информацию об
+    //объекте в консоль.
+    public int getAge() {
+        return this.age;
+    }
+    public void setAge( int ageNew) {
+        if (ageNew >= 0) {
+            this.age = ageNew;
+        } else {
+            System.out.println("Введен некорректный возраст");
+        }
+    }
+
+    public void getInfo() {
+        System.out.println("ФИО: " + name + "; Контактные данные: эл почта" + email + ", телефон " + telephone + "; Должность: " + position + "; Возраст: " + age);
     }
 
 //4. Создать массив из 5 сотрудников.
@@ -40,11 +61,18 @@ public class Employee {
         emplArray[3] = new Employee("Anton Buzo", "analyst", "44@gmail.com", 2224444, 71, 43);
         emplArray[4] = new Employee("Aleks Montik", "qa", "55@gmail.com", 2225555, 86, 25);
 
-//С помощью цикла вывести информацию только о сотрудниках старше 40 лет.
 
-        for (int i = 0; i < emplArray.length; i++) {
-            if (emplArray[i].age > 40) {
-                emplArray[i].info();
+
+//         for (int i = 0; i < emplArray.length; i++) {
+//            if (emplArray[i].age > 40) {
+//                emplArray[i].info();
+//            }
+//        }
+//5. С помощью цикла вывести информацию только о сотрудниках старше 40 лет.
+        for (int j = 0; j < emplArray.length; j++) {
+            emplArray[j].setAge(j+40);
+            if (emplArray[j].getAge() > 40) {
+                emplArray[j].getInfo();
             }
         }
 
