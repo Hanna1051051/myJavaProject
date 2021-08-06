@@ -69,8 +69,9 @@ public class Employee {
 //            }
 //        }
 //5. С помощью цикла вывести информацию только о сотрудниках старше 40 лет.
+// Стр 74  добавила как пример использования setAge, но по условиям задачи этого не требовалось - поэтому закомментировала ее
         for (int j = 0; j < emplArray.length; j++) {
-            emplArray[j].setAge(j+40);
+//            emplArray[j].setAge(j+38);
             if (emplArray[j].getAge() > 40) {
                 emplArray[j].getInfo();
             }
