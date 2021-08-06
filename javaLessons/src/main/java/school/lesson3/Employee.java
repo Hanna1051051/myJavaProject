@@ -45,8 +45,41 @@ public class Employee {
         }
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setPosition(String position) {
+        this.position = position;
+    }
+    public String getPosition() {
+        return position;
+    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public String getEmail() {
+        return email;
+    }
+
+    public void setTelephone (int telephone) {
+        this.telephone = telephone;
+    }
+    public int getTelephone() {
+        return telephone;
+    }
+    public void setWage(int wage) {
+        this.age = age;
+    }
+    public int getWage() {
+        return wage;
+    }
+
     public void getInfo() {
-        System.out.println("ФИО: " + name + "; Контактные данные: эл почта" + email + ", телефон " + telephone + "; Должность: " + position + "; Возраст: " + age);
+        System.out.printf("ФИО: %s, должность: %s, возраст: %d, контактные данные: эл почта - %s, телефон - %d , зарплата -%d", getName(), getPosition(), getAge(), getEmail(),getTelephone(), getWage());
+        System.out.println();
     }
 
 //4. Создать массив из 5 сотрудников.
@@ -55,11 +88,11 @@ public class Employee {
 
         Employee[] emplArray = new Employee[5];
 
-        emplArray[0] = new Employee("Ivan Ivanovich", "manager", "11@gmail.com", 2221111, 98, 45);
-        emplArray[1] = new Employee("Stepan Stepanovich", "team lead", "22@gmail.com", 2222222, 83, 41);
-        emplArray[2] = new Employee("Anna Stepanovich", "developer", "33@gmail.com", 2221221, 55, 27);
-        emplArray[3] = new Employee("Anton Buzo", "analyst", "44@gmail.com", 2224444, 71, 43);
-        emplArray[4] = new Employee("Aleks Montik", "qa", "55@gmail.com", 2225555, 86, 25);
+        emplArray[0] = new Employee("Ivan Ivanovich", "manager", "11@gmail.com", 2221111, 9800, 45);
+        emplArray[1] = new Employee("Stepan Stepanovich", "team lead", "22@gmail.com", 2222222, 8300, 41);
+        emplArray[2] = new Employee("Anna Stepanovich", "developer", "33@gmail.com", 2221221, 5500, 27);
+        emplArray[3] = new Employee("Anton Buzo", "analyst", "44@gmail.com", 2224444, 2100, 43);
+        emplArray[4] = new Employee("Aleks Montik", "qa", "55@gmail.com", 2225555, 1600, 25);
 
 
 
@@ -69,7 +102,7 @@ public class Employee {
 //            }
 //        }
 //5. С помощью цикла вывести информацию только о сотрудниках старше 40 лет.
-// Стр 74  добавила как пример использования setAge, но по условиям задачи этого не требовалось - поэтому закомментировала ее
+// Стр 107  добавила как пример использования setAge, но по условиям задачи этого не требовалось - поэтому закомментировала ее
         for (int j = 0; j < emplArray.length; j++) {
 //            emplArray[j].setAge(j+38);
             if (emplArray[j].getAge() > 40) {
