@@ -105,7 +105,7 @@ public class Employee {
 // Стр 107  добавила как пример использования setAge, но по условиям задачи этого не требовалось - поэтому закомментировала ее
         for (int j = 0; j < emplArray.length; j++) {
 //            emplArray[j].setAge(j+38);
-            if (emplArray[j].getAge() > 40) {
+            if (emplArray[j].getAge() > 25) {
                 emplArray[j].getInfo();
             }
         }
