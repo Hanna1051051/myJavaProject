@@ -1,43 +1,66 @@
 package school.lesson4.task7;
 
 public class Park {
-    class Raduga {
-        private String workingHours = "from 9 till 22 everyday";
-        private String name = "Raduga";
-        private int cost = 15;
+    class Attraction {
+        private String workingHours ;
+        private String name ;
+        private int cost ;
+        public Attraction (String name, String workingHours, int cost){
+            this.name= name;
+            this.workingHours=workingHours;
+            this.cost=cost;
+        }
+        public void setName(String name) {
+            this.name = name;
+        }
+        public String getName() {
+            return name;
+        }
+
+        public void setWorkingHours(String workingHours) {
+            this.workingHours = workingHours;
+        }
+        public String getWorkingHours() {
+            return workingHours;
+        }
+
+        public void setCost(int cost) {
+            this.cost = cost;
+        }
+        public int getCost() {
+            return cost;
+        }
+
         public void info() {
-            System.out.printf("The attraction %s is working %s. The cost is %d", name, workingHours,cost);
+            System.out.printf("The attraction %s is working %s. The cost is %d", getName(), getWorkingHours(), getCost());
             System.out.println();
         }
         public void cost() {
-            System.out.printf("The attraction %s costs %d", name, cost);
-            System.out.println();
+            System.out.printf("The attraction %s costs %d \n", getName(), getCost());
         }
         public void open() {
-            System.out.printf("The attraction %s is working %s", name, workingHours);
-            System.out.println();
+            System.out.printf("The attraction %s is working %s \n", getName(), getWorkingHours());
         }
         public void name() {
-            System.out.printf("The attraction %s is .....", name);
-            System.out.println();
+            System.out.printf("The attraction %s is .....\n", getName());
         }
     }
-    void infoRaduga () {
-        Raduga rad= new Raduga();
-        System.out.printf("The attraction %s is working %s. The cost is %d", rad.name, rad.workingHours,rad.cost);
-        System.out.println();
-    }
+
 
 
 
 
     public static void main(String[] args) {
-        Park.Raduga raduga = new Park().new Raduga();
-        raduga.name();
-        raduga.cost();
-        raduga.open();
+        Park.Attraction att1 = new Park().new Attraction("raduga"," from 9 till 20",15);
+        att1.name();
+        att1.cost();
+        att1.open();
+        Park.Attraction att2 = new Park().new Attraction("solnce"," from 10 till 18",5);
+        att2.name();
+        att2.cost();
+        att2.open();
+        att2.info();
 
-        Park park1 = new Park();
-        park1.infoRaduga();
+
     }
 }
