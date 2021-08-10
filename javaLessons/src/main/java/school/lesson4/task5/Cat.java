@@ -22,11 +22,19 @@ public class Cat {
             noHungry = false;
         }
     }
-//    public void setAppetite(int appetite) {
-//        this.appetite = appetite;
-//    }
+    public void setAppetite(int appetite) {
+        this.appetite = appetite;
+    }
 
     public int getAppetite() {
         return appetite;
+    }
+
+    public void setName(String Name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
     }
 }
