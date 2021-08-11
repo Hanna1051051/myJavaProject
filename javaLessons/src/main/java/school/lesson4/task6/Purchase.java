@@ -76,5 +76,6 @@ public class Purchase {
 
             }
         }
+        System.out.printf("%s%.2f%s", "Total to pay: ", totalPurchase, "р.\n");
     }
 }
