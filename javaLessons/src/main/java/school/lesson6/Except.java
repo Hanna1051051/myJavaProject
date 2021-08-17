@@ -55,7 +55,7 @@ public class Except {
         try {
             arraySizeSum(arr1);
 
-        } catch (Exception e) {
+        } catch (MyArraySizeException | MyArrayDataException e ) {
             System.out.println(e.getMessage());
             e.printStackTrace();
         }
